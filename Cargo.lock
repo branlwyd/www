@@ -2197,7 +2197,7 @@ checksum = "0770833d60a970638e989b3fa9fd2bb1aaadcf88963d1659fd7d9990196ed2d6"
 
 [[package]]
 name = "www"
-version = "1.0.0"
+version = "0.0.0"
 dependencies = [
  "axum",
  "axum-server",
