@@ -3,12 +3,9 @@
 
 Welcome to Branland! I'm Bran, and this is my personal website. I'm a Software
 Engineer living in Portland. My interests include mathematics, computer science,
-information security/privacy, and cryptography. I'm also into baking, video
-games, board games/TTRPGs, collecting tarot, coffee... and more.
-
-I used to live in the Bay Area. I don't think I'll ever want to go back, but it
-was fun while it lasted. If you get the chance to visit, make sure to see Santa
-Cruz (especially the boardwalk!) and Carmel-by-the-Sea.
+information security/privacy, and cryptography. I'm also into baking, fitness,
+video games, board games/TTRPGs, musical theater & opera, collecting tarot,
+coffee... and more.
 
 ## Projects
 
