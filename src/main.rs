@@ -3,10 +3,10 @@ use axum::{
     handler::Handler,
     http::{
         header::{
-            CONTENT_SECURITY_POLICY, CONTENT_TYPE, ETAG, REFERRER_POLICY,
+            CONTENT_SECURITY_POLICY, CONTENT_TYPE, ETAG, IF_NONE_MATCH, REFERRER_POLICY,
             STRICT_TRANSPORT_SECURITY, X_CONTENT_TYPE_OPTIONS, X_FRAME_OPTIONS, X_XSS_PROTECTION,
         },
-        HeaderValue,
+        HeaderValue, StatusCode,
     },
     response::{IntoResponse, Response},
     routing::get,
@@ -68,7 +68,16 @@ impl StaticHandler {
 impl<S> Handler<(), S> for StaticHandler {
     type Future = future::Ready<Response>;
 
-    fn call(self, _: Request, _: S) -> Self::Future {
+    fn call(self, req: Request, _: S) -> Self::Future {
+        // Check if the result is cached, and return NOT_MODIFIED if so.
+        if req.headers().get(IF_NONE_MATCH).map(HeaderValue::as_bytes) == Some(self.etag.as_bytes())
+        {
+            return future::ready(
+                ([(ETAG, self.etag.as_ref())], StatusCode::NOT_MODIFIED).into_response(),
+            );
+        }
+
+        // Otherwise, return the full response.
         future::ready(
             (
                 [(CONTENT_TYPE, self.content_type), (ETAG, &self.etag)],
