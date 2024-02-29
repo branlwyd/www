@@ -4,8 +4,8 @@
 Welcome to Branland! I'm Bran, and this is my personal website. I'm a Software
 Engineer living in Portland. My interests include mathematics, computer science,
 information security/privacy, and cryptography. I'm also into baking, fitness,
-video games, board games/TTRPGs, musical theater & opera, collecting tarot,
-coffee... and more.
+video games, board games/TTRPGs, musical theater & opera, tarot, art (especially
+occult & surreal), coffee... and more.
 
 ## Projects
 
@@ -18,10 +18,10 @@ languages.
 Here are some of my favorite projects:
 
 *  [This site](https://github.com/branlwyd/www): the server for this site is a
-   custom-written Rust webserver. It supports HTTP/2 via the
-   [axum-server](https://crates.io/crates/axum-server)/[hyper](https://crates.io/crates/hyper)
-   crates, and uses the [rustls-acme](https://crates.io/crates/rustls-acme)
-   crate to automatically retrieve and renew TLS certificates from [Let's
+   custom-written Rust webserver. It serves HTTP using the
+   [axum](https://crates.io/crates/axum) crate, and uses the
+   [rustls-acme](https://crates.io/crates/rustls-acme) crate to automatically
+   retrieve and renew TLS certificates from [Let's
    Encrypt](https://letsencrypt.org). The site's static content is stored as
    files alongside in the source repository, with page content stored in
    Markdown format. During compilation, the Markdown files are converted into
