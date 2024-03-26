@@ -23,9 +23,9 @@ Here are some of my favorite projects:
    [rustls-acme](https://crates.io/crates/rustls-acme) crate to automatically
    retrieve and renew TLS certificates from [Let's
    Encrypt](https://letsencrypt.org). The site's static content is stored as
-   files alongside in the source repository, with page content stored in
-   Markdown format. During compilation, the Markdown files are converted into
-   HTML via a build script, calling into a tool based on the
+   files in the source repository, with page content stored in Markdown format.
+   During compilation, the Markdown files are converted into HTML via a build
+   script, calling into a tool based on the
    [pulldown-cmark](https://crates.io/crates/pulldown-cmark) crate. The
    resulting HTML & all other static assets are then embedded into the resulting
    server binary via the [rust-embed](https://crates.io/crates/rust-embed)
