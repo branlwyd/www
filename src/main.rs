@@ -178,10 +178,7 @@ async fn main() {
             .cache(DirCache::new("/home/www/certs"))
             .directory_lets_encrypt(true)
             .state();
-        let mut config = match Arc::try_unwrap(state.default_rustls_config()) {
-            Ok(config) => config,
-            Err(arc_config) => arc_config.as_ref().clone(),
-        };
+        let mut config = Arc::unwrap_or_clone(state.default_rustls_config());
         config.alpn_protocols = Vec::from([
             "h2".as_bytes().to_vec(),
             "http/1.1".as_bytes().to_vec(),
