@@ -6,19 +6,19 @@ edition = "2021"
 test = []
 
 [dependencies]
+aws-lc-rs = "1"
 axum = "0.7"
-axum-server = "0.6"
+axum-server = "0.7"
 bytes = "1"
-base64 = "0.21"
-ring = "0.17"
+base64 = "0.22"
 rust-embed = { version = "8", features = ["interpolate-folder-path"] }
-rustls-acme = { version = "0.9", features = ["axum"] }
+rustls-acme = { version = "0.11", features = ["axum"] }
 tokio = { version = "1", features = ["full"] }
 tokio-stream = "0.1"
-tower = "0.4"
-tower-http = { version = "0.5", features = ["set-header", "timeout", "trace"] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["set-header", "timeout", "trace"] }
 tracing = "0.1"
 tracing-subscriber = "0.3"
 
 [build-dependencies]
-pulldown-cmark = "0.10"
+pulldown-cmark = "0.12"

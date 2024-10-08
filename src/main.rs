@@ -1,3 +1,4 @@
+use aws_lc_rs::digest::{digest, SHA512_256};
 use axum::{
     extract::Request,
     handler::Handler,
@@ -14,7 +15,6 @@ use axum::{
 };
 use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine};
 use bytes::Bytes;
-use ring::digest::{digest, SHA512_256};
 use rust_embed::RustEmbed;
 use std::{borrow::Cow, future, net::Ipv4Addr, sync::Arc, time::Duration};
 use tower::ServiceBuilder;
