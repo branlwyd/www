@@ -117,10 +117,6 @@ async fn main() {
             "/favicon.ico",
             get(StaticHandler::from_asset("image/x-icon", "static/favicon.ico")),
         )
-        .route(
-            "/resume.pdf",
-            get(StaticHandler::from_asset("application/pdf", "static/resume.pdf")),
-        )
         .layer(
             ServiceBuilder::new()
                 .layer(

@@ -1,5 +1,5 @@
 <h1 class="site-header">branland</h1>
-<div class="contact-list"><a href="mailto:bran@bran.land" target="_blank">Email</a> | <a href="https://github.com/branlwyd" target="_blank">Github</a> | <a href="https://www.linkedin.com/in/brandon-pitman-00046554" target="_blank">LinkedIn</a> | <a href="https://twitter.com/bran_lwyd" target="_blank">Twitter</a> | <a href="/resume.pdf" target="_blank">Resumé</a></div>
+<div class="contact-list"><a href="https://github.com/branlwyd" target="_blank">Github</a> | <a href="https://bsky.app/profile/bran.land" target="_blank">Bluesky</a> | <a href="mailto:bran@bran.land" target="_blank">Email</a></div>
 
 Welcome to Branland! I'm Bran, and this is my personal website. I'm a Software
 Engineer living in Portland. My interests include mathematics, computer science,
