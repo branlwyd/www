@@ -124,7 +124,7 @@ async fn main() {
                         .make_span_with(DefaultMakeSpan::new().level(Level::INFO))
                         .on_response(DefaultOnResponse::new().level(Level::INFO)),
                 )
-                .layer(TimeoutLayer::new(Duration::from_secs(10)))
+                .layer(TimeoutLayer::with_status_code(StatusCode::REQUEST_TIMEOUT, Duration::from_secs(10)))
                 .layer(SetResponseHeaderLayer::overriding(
                     STRICT_TRANSPORT_SECURITY,
                     HeaderValue::from_static("max-age=31536000; includeSubDomains; preload"),
